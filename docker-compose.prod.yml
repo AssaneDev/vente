@@ -9,6 +9,10 @@ services:
       - type: bind
         source: /root/vente
         target: /usr/share/nginx/html
+      - type: bind
+        source: /etc/letsencrypt
+        target: /etc/letsencrypt
     restart: unless-stopped
+
 
       
