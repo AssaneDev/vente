@@ -6,6 +6,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./vente:/usr/share/nginx/html
-      - /etc/letsencrypt:/etc/letsencrypt  # Monter les certificats
+      - type: bind
+        source: /home/rouguicode/Images/image/ges+
+        target: /usr/share/nginx/html
     restart: unless-stopped
+
+      
