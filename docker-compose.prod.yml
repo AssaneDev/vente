@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./your_site:/usr/share/nginx/html
+      - /etc/letsencrypt:/etc/letsencrypt  # Monter les certificats
+    restart: unless-stopped
