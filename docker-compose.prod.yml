@@ -7,7 +7,7 @@ services:
       - "443:443"
     volumes:
       - type: bind
-        source: /home/rouguicode/Images/image/ges+
+        source: /root/vente
         target: /usr/share/nginx/html
     restart: unless-stopped
 
